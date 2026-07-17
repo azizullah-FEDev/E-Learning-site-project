@@ -6,16 +6,22 @@
  }
 } 
 
-body {
+html body {
   font-family: 'Poppins', sans-serif;
   background: #FFFFFF;
   max-width: 1912px;
+  /* max-width: 100vw;
+  width: 100%; */
+  overflow-x: hidden;
   /* max-height: 1118px; */
+
 }
 
 
 .container {
   max-width: 1655px;
+  /* max-width: 100%; */
+  width: 100%;
   margin: 30px auto;
 }
 
@@ -25,7 +31,8 @@ body {
   overflow: hidden;
   border-bottom-left-radius: 50% 60px;
   border-bottom-right-radius: 50% 60px;
-  width: 100%;
+  /* width: 100%;
+  max-width: 100%; */
   /* min-height: fit-content; */
 }
 
@@ -36,7 +43,8 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 83px;
-  width: 100%;
+  /* width: 100%;
+  max-width: 100%; */
   /* margin-top: 20px; */
 }
 
@@ -241,8 +249,9 @@ body {
 }
 
 .icon-box-blue img {
-  width: 27.5px;
-  height: 27.5px;
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
 }
 
 .badge-text h4 {
@@ -284,8 +293,9 @@ body {
 }
 
 .icon-box-orange img {
-  width: 30px;
-  height: 30px;
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
 }
 
 .badge-3 {
@@ -353,8 +363,8 @@ body {
 .badge-4 {
   top: 202px;
   left: 530px;
-  width: 69px;
-  height: 69px;
+  width: clamp(42px, 4.5vw, 69px);
+  height: clamp(42px, 4.5vw, 69px);
   border-radius: 14px;
   background-color: #F3627C;
   box-shadow: 0px 8px 40px 0px #D24D6542;
@@ -365,8 +375,8 @@ body {
 }
 
 .icon-inner-box {
-  width: 47.3px;
-  height: 44.85px;
+  width: 68%;
+  height: 68%;
   border-radius: 8px;
   background-color: #FFFFFF;
   display: flex;
@@ -375,41 +385,42 @@ body {
 }
 
 .icon-inner-box img {
-  width: 18.1px;
-  height: 24.15px;
+  width: 45%;
+  height: 45%;
+  object-fit: contain;
   display: block;
 }
 
 
 /* Laptop (max 1845px)  */
-@media (max-width: 1845px) {
+/* @media (max-width: 1845px) {
   .container {
     max-width: 94%;
-  }
+  } */
 
   /* Navbar section  */
 
-.navbar {
+/* .navbar {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 73px;
-}
+} */
 
 /* Logo */
 
-.logo-icon {
+/* .logo-icon {
   width: 104px;
   height: 73px;
-}
+} */
 
 /* Nav links */
-.nav-links {
-  display: flex;
+/* .nav-links {
+  display: flex; */
   /* width: 621px; */
-  gap: 50px;
+  /* gap: 50px; */
   /* justify-content: center; */
-  padding-bottom: 21px;
+  /* padding-bottom: 21px;
   margin: 15px 0;
   
 }
@@ -417,10 +428,10 @@ body {
 .nav-links a {
   font-weight: 400;
   font-size: 20px;
-}
+} */
 
 /* Buttons */
-.nav-buttons {
+/* .nav-buttons {
   display: flex;
   gap: 10px;
   margin-top: 4px;
@@ -435,4 +446,446 @@ body {
   font-size: 20px;
 }
 
+}
+ */
+@media (max-width:1845px) and (min-width:1712px){
+  .navbar{ padding:15px 38px; height:78px; }
+  .logo-icon{ width:110px; height:78px; }
+  .nav-links{ gap:68px; margin:15px 0; padding-bottom:21px; font-size:21px; }
+  .nav-buttons{ gap:20px; padding-bottom:24px; }
+  .btn-login, .btn-signup{ width:auto; height:auto; padding:17px 38px; font-size:21px; }
+}
+@media (max-width:1711px) and (min-width:1550px){
+  .navbar{ padding:15px 36px; height:76px; justify-content:space-around; }
+  .logo-icon{ width:108px; height:76px; }
+  .nav-links{ gap:62px; margin:15px 0; padding-bottom:21px; font-size:21px; }
+  .nav-buttons{ gap:16px; padding-bottom:24px; }
+  .btn-login, .btn-signup{ width:auto; height:auto; padding:16px 36px; font-size:20px; }
+}
+@media (max-width:1549px) and (min-width:1408px){
+  .navbar{ padding:15px 34px; height:75px; justify-content:space-around; }
+  .logo-icon{ width:104px; height:73px; }
+  .nav-links{ gap:50px; margin:15px 0; padding-bottom:21px; font-size:20px; }
+  .nav-buttons{ gap:14px; padding-bottom:24px; }
+  .btn-login, .btn-signup{ width:auto; height:auto; padding:16px 34px; font-size:20px; }
+}
+@media (max-width:1407px) and (min-width:1300px){
+  .navbar{ padding:15px 32px; height:74px; }
+  .logo-icon{ width:100px; height:71px; }
+  .nav-links{ gap:44px; margin:15px 0; padding-bottom:21px; font-size:19px; }
+  .nav-buttons{ gap:12px; padding-bottom:24px; }
+  .btn-login, .btn-signup{ width:auto; height:auto; padding:15px 32px; font-size:19px; }
+}
+@media (max-width:1299px) and (min-width:1200px){
+  .navbar{ padding:15px 30px; height:73px; }
+  .logo-icon{ width:95px; height:67px; }
+  .nav-links{ gap:38px; margin:15px 0; padding-bottom:21px; font-size:18px; }
+  .nav-buttons{ gap:10px; padding-bottom:24px; }
+  .btn-login, .btn-signup{ width:auto; height:auto; padding:14px 30px; font-size:18px; }
+}
+@media (max-width:1199px) and (min-width:992px){
+  .navbar{ padding:15px 35px; justify-content:space-around; }
+  .logo-icon{ width:85px; height:61px; }
+  .nav-links{ gap:22px; margin:15px 0; padding-bottom:20px; font-size:17px; }
+  .nav-buttons{ gap:8px; padding-bottom:22px; }
+  .btn-login, .btn-signup{ width:auto; height:auto; padding:12px 25px; font-size:16px; }
+}
+
+@media (max-width: 1845px) and (min-width: 992px) {
+  .hero-text{ margin-top: clamp(70px, 8vw, 165px); }
+  .hero-text h1{ font-size: clamp(32px, 2.6vw, 50px); max-width: clamp(440px, 34vw, 630px); }
+  .hero-text p{ font-size: clamp(17px, 1.1vw, 21px); margin-top: 20px; margin-bottom: 26px; }
+  .btn-join{ width: clamp(170px, 11vw, 210px); height: clamp(52px, 3.5vw, 65px); font-size: clamp(18px, 1.2vw, 23px); }
+  .play-btn{ width: clamp(52px, 3.6vw, 68px); height: clamp(52px, 3.6vw, 68px); }
+  .watch-btn{ font-size: clamp(16px, 1vw, 20px); gap: clamp(14px, 1.4vw, 26px); }
+
+  .hero-image{
+    width: 33vw;
+    max-width: 630px;
+    min-width: 380px;
+    position: relative;
+  }
+  .hero-image img{ width: 100%; height: auto; }
+
+  .badge{ position: absolute; }
+  .badge-1{ left: -12.7%; top: 29.4%; width: 44.4%; height: auto; }
+  .badge-2{ left: 58.7%;  top: 47.2%; width: 54%;   height: auto; }
+  .badge-3{ left: -15.1%; top: 61.3%; width: 57.1%; height: auto; }
+  .badge-4{ left: 77.8%; top: 23.3%; width: clamp(38px, 8%, 60px); height: auto; aspect-ratio: 1/1; }
+  .icon-inner-box{
+    width: 68%;
+    height: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-inner-box img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+
+  .badge-text h4{ font-size: clamp(14px, 1.1vw, 20px); }
+  .badge-text p{ font-size: clamp(11px, 0.9vw, 16px); }
+  .icon-box-blue, .icon-box-orange{
+  width: clamp(32px, 3vw, 50px);
+  height: clamp(32px, 3vw, 50px);
+}
+.icon-box-blue img, .icon-box-orange img{
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+
+.avatar{
+  width: clamp(28px, 3vw, 48px);
+  height: clamp(28px, 3vw, 48px);
+}
+}
+
+@media (max-width:991px) and (min-width:768px){
+.navbar{
+    padding:15px 20px;
+    height: auto;
+    justify-content: space-around;
+}
+.logo-icon{
+    width:70px;
+    height:50px;
+}
+.nav-links{
+    gap:13px;
+    margin:15px 0;
+    padding-bottom: 5px;
+    font-size:14px;
+}
+
+.nav-links a{
+  font-size: 19px;
+}
+.nav-buttons{
+    gap:10px;
+    padding-bottom: 18px;
+}
+.btn-login,
+.btn-signup{
+    width:auto;
+    height:auto;
+    padding:10px 20px;
+    font-size:14px;
+}
+
+.hero-content{ flex-direction: column; align-items: center; text-align: center; min-height: auto; }
+.hero-text{ margin-top: 50px; max-width: 550px; }
+.hero-text h1{ font-size: 34px; max-width: 100%; margin-left: 0; }
+.hero-text p{ font-size: 18px; margin-top: 18px; margin-bottom: 25px; margin-left: 0; }
+.hero-buttons{ margin-left: 0; justify-content: center; gap: 20px; }
+.btn-join{ width: 180px; height: 55px; font-size: 19px; }
+.play-btn{ width: 55px; height: 55px; }
+.watch-btn{ font-size: 17px; gap: 15px; }
+
+.hero-image{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.hero-image img{ position: relative; width: 340px; height: auto; }
+.badge:not(.badge-4){
+  position: static !important;
+  width: 90%;
+  max-width: 380px;
+  height: auto !important;
+  margin: 12px auto;
+  padding: 15px 22px;
+}
+.badge-4{
+  position: static !important;
+  width: 60px !important;
+  height: 60px !important;
+  margin: 12px auto;
+}
+.badge-4 .icon-inner-box{ width: 68%; height: 68%; }
+.badge-4 .icon-inner-box img{ width: 45%; height: 45%; }
+.icon-box-blue, .icon-box-orange{
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-box-blue img, .icon-box-orange img{
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+
+.badge-3{ align-items: center; text-align: center; }
+.badge-3-top{ flex-direction: column; align-items: center; gap: 10px; }
+}
+
+@media (max-width:767px) and (min-width:685px){
+.navbar{
+    padding:15px 15px;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    height: auto;
+}
+.logo-icon{
+    width:67px;
+    height:48px;
+}
+.nav-links{
+    gap:12px;
+    margin:10px 0;
+    padding-bottom: 10px;
+    font-size:13px;
+}
+.nav-links a{
+  font-size: 18px;
+}
+.nav-buttons{
+    gap:8px;
+    padding-bottom: 15px;
+}
+.btn-login,
+.btn-signup{
+    width:auto;
+    height:auto;
+    padding:8px 16px;
+    font-size:12px;
+}
+
+.hero-content{ flex-direction: column; align-items: center; text-align: center; min-height: auto; }
+.hero-text{ margin-top: 45px; max-width: 500px; }
+.hero-text h1{ font-size: 30px; max-width: 100%; margin-left: 0; }
+.hero-text p{ font-size: 17px; margin-top: 16px; margin-bottom: 22px; margin-left: 0; }
+.hero-buttons{ margin-left: 0; justify-content: center; gap: 18px; }
+.btn-join{ width: 170px; height: 52px; font-size: 18px; }
+.play-btn{ width: 50px; height: 50px; }
+.watch-btn{ font-size: 16px; gap: 14px; }
+
+.hero-image{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 45px;
+}
+.hero-image img{ position: relative; width: 300px; height: auto; }
+.badge:not(.badge-4){
+  position: static !important;
+  width: 90%;
+  max-width: 340px;
+  height: auto !important;
+  margin: 10px auto;
+  padding: 14px 20px;
+}
+.badge-4{
+  position: static !important;
+  width: 56px !important;
+  height: 56px !important;
+  margin: 10px auto;
+}
+.badge-4 .icon-inner-box{ width: 68%; height: 68%; }
+.badge-4 .icon-inner-box img{ width: 45%; height: 45%; }
+
+.badge-3{ align-items: center; text-align: center; }
+.badge-3-top{ flex-direction: column; align-items: center; gap: 8px; }
+.badge-text h4{ font-size: 17px; }
+.badge-text p{ font-size: 14px; }
+.icon-box-blue, .icon-box-orange{
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-box-blue img, .icon-box-orange img{
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+}
+
+@media (max-width:684px) and (min-width:568px){
+.navbar{
+    padding:15px 12px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+}
+.logo-icon{
+    width:60px;
+    height:42px;
+}
+.nav-links{
+    gap:8px;
+    margin:8px 0;
+    padding-bottom: 8px;
+    font-size:11px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav-links a{
+  font-size: 16px;
+}
+.nav-buttons{
+    width:auto;
+    height:auto;
+    gap:6px;
+    padding-bottom: 15px;
+}
+.btn-login,
+.btn-signup{
+    width:auto;
+    height:auto;
+    padding:7px 12px;
+    font-size:10px;
+}
+.hero-content{ flex-direction: column; align-items: center; text-align: center; min-height: auto; }
+.hero-text{ margin-top: 35px; max-width: 400px; }
+.hero-text h1{ font-size: 26px; max-width: 100%; margin-left: 0; }
+.hero-text p{ font-size: 15.5px; margin-top: 14px; margin-bottom: 20px; margin-left: 0; }
+.hero-buttons{ margin-left: 0; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.btn-join{ width: 160px; height: 50px; font-size: 17px; }
+.play-btn{ width: 48px; height: 48px; }
+.watch-btn{ font-size: 15px; gap: 12px; }
+
+.hero-image{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+}
+.hero-image img{ position: relative; width: 260px; height: auto; }
+.badge:not(.badge-4){
+  position: static !important;
+  width: 90%;
+  max-width: 300px;
+  height: auto !important;
+  margin: 10px auto;
+  padding: 12px 18px;
+}
+.badge-4{
+  position: static !important;
+  width: 50px !important;
+  height: 50px !important;
+  margin: 10px auto;
+}
+.badge-4 .icon-inner-box{ width: 68%; height: 68%; }
+.badge-4 .icon-inner-box img{ width: 45%; height: 45%; }
+
+.badge-3{ align-items: center; text-align: center; }
+.badge-3-top{ flex-direction: column; align-items: center; gap: 8px; }
+.badge-text h4{ font-size: 16px; }
+.badge-text p{ font-size: 13px; }
+.icon-box-blue, .icon-box-orange{
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-box-blue img, .icon-box-orange img{
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+}
+
+@media (max-width:567px) {
+.navbar{
+    padding:12px 10px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+}
+.logo-icon{
+    width:60px;
+    height:44px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+.nav-links{
+    gap:6px;
+    margin:8px 0;
+    padding-bottom: 15px;
+    flex-direction: column;
+    font-size:10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav-buttons{
+    gap:5px;
+    padding-bottom: 12px;
+    justify-content: center;
+}
+.btn-login,
+.btn-signup{
+    width:auto;
+    height:auto;
+    padding:6px 10px;
+    font-size:9px;
+}
+.hero-content{ flex-direction: column; align-items: center; text-align: center; min-height: auto; }
+.hero-text{ margin-top: 25px; max-width: 320px; }
+.hero-text h1{ font-size: 22px; max-width: 100%; margin-left: 0; line-height: 1.3; }
+.hero-text p{ font-size: 14px; margin-top: 12px; margin-bottom: 18px; margin-left: 0; }
+.hero-text p br{ display: none; }
+.hero-buttons{ margin-left: 0; justify-content: center; flex-direction: column; gap: 15px; }
+.btn-join{ width: 100%; max-width: 220px; height: 48px; font-size: 15.5px; }
+.watch-btn{ font-size: 14px; gap: 10px; }
+.play-btn{ width: 44px; height: 44px; }
+.play-btn::after{ border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 15px solid #29ABE2; }
+
+.hero-image{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+.hero-image img{ position: relative; width: 220px; height: auto; }
+.badge:not(.badge-4){
+  position: static !important;
+  width: 92%;
+  max-width: 280px;
+  height: auto !important;
+  margin: 10px auto;
+  padding: 12px 16px;
+  gap: 12px;
+}
+.badge-4{
+  position: static !important;
+  width: 46px !important;
+  height: 46px !important;
+  margin: 10px auto;
+}
+.badge-4 .icon-inner-box{ width: 68%; height: 68%; }
+.badge-4 .icon-inner-box img{ width: 45%; height: 45%; }
+
+.badge-3{ align-items: center; text-align: center; }
+.badge-3-top{ flex-direction: column; align-items: center; gap: 8px; }
+.badge-text h4{ font-size: 15px; }
+.badge-text p{ font-size: 12px; }
+.icon-box-blue, .icon-box-orange{ width: 38px; height: 38px; }
+.btn-join-now{ width: 150px; height: 42px; font-size: 16px; }
+.icon-box-blue, .icon-box-orange{
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-box-blue img, .icon-box-orange img{
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
 }
