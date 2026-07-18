@@ -391,63 +391,7 @@ html body {
   display: block;
 }
 
-
-/* Laptop (max 1845px)  */
-/* @media (max-width: 1845px) {
-  .container {
-    max-width: 94%;
-  } */
-
-  /* Navbar section  */
-
-/* .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 73px;
-} */
-
-/* Logo */
-
-/* .logo-icon {
-  width: 104px;
-  height: 73px;
-} */
-
-/* Nav links */
-/* .nav-links {
-  display: flex; */
-  /* width: 621px; */
-  /* gap: 50px; */
-  /* justify-content: center; */
-  /* padding-bottom: 21px;
-  margin: 15px 0;
-  
-}
-
-.nav-links a {
-  font-weight: 400;
-  font-size: 20px;
-} */
-
-/* Buttons */
-/* .nav-buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 4px;
-  padding-bottom: 24px;
-}
-
-.btn-login,
-.btn-signup {
-  width: 150px;
-  height: 55px;
-  font-weight: 500;
-  font-size: 20px;
-}
-
-}
- */
+ /* Responsive CSS Layout */
 @media (max-width:1845px) and (min-width:1712px){
   .navbar{ padding:15px 38px; height:78px; }
   .logo-icon{ width:110px; height:78px; }
@@ -508,8 +452,8 @@ html body {
   .hero-image img{ width: 100%; height: auto; }
 
   .badge{ position: absolute; }
-  .badge-1{ left: -12.7%; top: 29.4%; width: 44.4%; height: auto; }
-  .badge-2{ left: 58.7%;  top: 47.2%; width: 54%;   height: auto; }
+  .badge-1{ left: -12.7%; top: 29.4%; width: 44.4%; height: clamp(70px, 6.5vw, 100px); }
+  .badge-2{ left: 58.7%;  top: 47.2%; width: 54%;   height: clamp(75px, 7vw, 110px); }
   .badge-3{ left: -15.1%; top: 61.3%; width: 57.1%; height: auto; }
   .badge-4{ left: 77.8%; top: 23.3%; width: clamp(38px, 8%, 60px); height: auto; aspect-ratio: 1/1; }
   .icon-inner-box{
